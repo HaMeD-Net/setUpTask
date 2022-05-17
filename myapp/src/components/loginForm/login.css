@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: cadetblue;
+    background-color: #2f4f4f;
 }
 .ant-form-item{
     width: 100%;
@@ -19,4 +19,5 @@
     width: 35%;
     box-shadow: 1px 1px 4px #040303;
     padding: 10px 5px;
+    background-color: #ffffff78;
 }

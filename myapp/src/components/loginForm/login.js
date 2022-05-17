@@ -1,12 +1,19 @@
 import { Form, Input, Button, Checkbox } from 'antd';
-import "./login.css"
+import { useNavigate } from 'react-router-dom';
+import "./login.css";
 
 
 const Login = () => {
 
+    const navigate = useNavigate();
+
     const onFinish = (values) => {
-        console.log('Success:', values);
+        localStorage.setItem('username', values.username);
+        localStorage.setItem('password', values.username);
+        if (values.username === 'admin' && values.password === 'admin')
+            navigate('/home')
     };
+
 
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
@@ -78,4 +85,3 @@ const Login = () => {
 };
 
 export default Login;
-
